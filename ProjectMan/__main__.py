@@ -15,9 +15,9 @@ from ProjectMan import BOTLOG_CHATID, LOGGER, LOOP, aiosession, bots
 from ProjectMan.helpers.misc import git, heroku
 
 MSG_ON = """
-🔥 **PyroMan-Userbot Berhasil Di Aktifkan**
+🔥 **Xtream-Userbot Berhasil Di Aktifkan**
 ━━
-➠ **Userbot Version -** `{}`
+➠ **Userbot Version 2022-** `{}`
 ➠ **Ketik** `{}alive` **untuk Mengecheck Bot**
 ━━
 """
@@ -28,8 +28,8 @@ async def main():
         try:
             await bot.start()
             bot.me = await bot.get_me()
-            await bot.join_chat("Lunatic0de")
-            await bot.join_chat("SharingUserbot")
+            await bot.join_chat("Idoganz1")
+            await bot.join_chat("One shot")
             await bot.send_message(BOTLOG_CHATID, MSG_ON.format(BOT_VER, CMD_HANDLER))
         except Exception as a:
             LOGGER("main").warning(a)
@@ -38,10 +38,10 @@ async def main():
 
 
 if __name__ == "__main__":
-    LOGGER("ProjectMan").info("Starting PyroMan-UserBot")
-    LOGGER("ProjectMan").info(f"Total Clients = {len(bots)} Users")
+    LOGGER("Idoganz1").info("Xtream-UserBot")
+    LOGGER("Idoganz1").info(f"Total Clients = {len(bots)} Users")
     install()
     git()
     heroku()
-    LOGGER("ProjectMan").info(f"PyroMan-UserBot v{BOT_VER} [🔥 BERHASIL DIAKTIFKAN! 🔥]")
+    LOGGER("ProjectMan").info(f"Xtream-UserBot v{BOT_VER} [🔥 BERHASIL DIAKTIFKAN! 🔥]")
     LOOP.run_until_complete(main())
